@@ -1,0 +1,57 @@
+.layout {
+    .container {
+      .left {
+        background-color: #131921;
+        padding: 1rem 3.3%;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          list-style: none;
+          li {
+            h1 {
+              font-size: 1.5rem;
+              border-bottom: 4px solid #febd68;
+              color: white;
+            }
+            form {
+              display: flex;
+              align-items: center;
+  
+              input {
+                position: relative;
+                width: 40rem;
+                padding: 0.8rem;
+                border-radius: 2rem;
+                border: 1px solid black;
+                font-size: 1rem;
+              }
+              button {
+                position: absolute;
+                right: 25.9rem;
+                padding: 0.8rem;
+                border-radius: 2rem;
+                border: none;
+                background-color: #febd68;
+              }
+            }
+            .cart {
+              display: flex;
+              align-items: center;
+            }
+            p {
+              max-width: 70%;
+            }
+            select {
+              padding: 0.5rem 2rem;
+              border-radius: 2rem;
+              color: #febd68;
+              border: 1px solid black;
+              font-weight: 800;
+            }
+          }
+        }
+      }
+    }
+  }
+  

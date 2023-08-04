@@ -4,7 +4,7 @@ interface homeProps {
   data: any;
 }
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch("http://localhost:3000/api/products");
+  const response = await fetch("http://localhost:3001/api/products");
   const data = await response.json();
 
   const paths = data?.products?.map((items: any) => {
@@ -15,10 +15,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
+
+
 export const getStaticProps: GetStaticProps = async (context: any) => {
   const { productId } = context?.params;
   const response = await fetch(
-    `http://localhost:3000/api/products/${productId}`
+    `http://localhost:3001/api/products/${productId}`
   );
   const data = await response.json();
   return {
@@ -28,7 +30,6 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
   };
 };
 export default function ProductDetails({ data }: homeProps) {
-  console.log(data)
   return (
     <div>
       <h2>Details </h2>

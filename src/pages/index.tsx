@@ -4,17 +4,34 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import {AxiosError} from "axios"
 const Home: NextPage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/products")
-      .then((res) => res.json())
-      .then((data) => setData(data?.products));
+    const fetchData = async () => {
+      let acsessApi: boolean = true;
+      try {
+        const response = await fetch('http://localhost:3001/api/products');
+        const data = await response.json();
+        if (acsessApi) {
+          setData(data?.products)
+        }
+
+      } catch (error) {
+        if (error instanceof AxiosError) {
+          console.log(error.message)
+        }
+      }
+    }
+    fetchData();
+    return ( ) => {
+      const acsessApi = false
+    }
   }, []);
 
   const { push } = useRouter();
-
+  console.log(data)
   return (
     <div className={styles.container}>
       <Head>
@@ -32,13 +49,6 @@ const Home: NextPage = () => {
              <Image alt="test" src={item?.img} width={300} height={300} layout="intrinsic"/>
             </div>
             <h3>{item?.name}</h3>
-            <div className={styles.btnla}>
-              <button>delete</button>
-              <button>update</button>
-              <button onClick={() => push(`/product-details/${item.id}`)}>
-                details
-              </button>
-            </div>
           </div>
         );
       })}
