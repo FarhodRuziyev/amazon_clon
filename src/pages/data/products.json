@@ -1,0 +1,54 @@
+{ 
+  "products": [
+    {
+      "id": "1",
+      "name": "Hp",
+      "brand": "Hp",
+      "price": 1200,
+      "description": "lorem",
+      "size": "17",
+      "color": "golden",
+      "img": "https://i.pinimg.com/564x/18/2e/71/182e71b315d1a6244dd091e7b2e1202c.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Macos",
+      "brand": "Macos",
+      "price": 1500,
+      "description": "lorem",
+      "size": "13",
+      "color": "white",
+      "img": "https://i.pinimg.com/564x/18/2e/71/182e71b315d1a6244dd091e7b2e1202c.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Asus",
+      "brand": "Asus",
+      "price": 1600,
+      "description": "lorem",
+      "size": "16",
+      "color": "black",
+      "img": "https://i.pinimg.com/564x/18/2e/71/182e71b315d1a6244dd091e7b2e1202c.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Dell",
+      "brand": "Dell",
+      "price": 1100,
+      "description": "lorem",
+      "size": "15",
+      "color": "black",
+      "img": "https://i.pinimg.com/564x/18/2e/71/182e71b315d1a6244dd091e7b2e1202c.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Lenova",
+      "brand": "Lenova",
+      "price": 900,
+      "description": "lorem",
+      "size": "14",
+      "color": "red",
+      "img": "https://i.pinimg.com/564x/18/2e/71/182e71b315d1a6244dd091e7b2e1202c.jpg"
+    }
+  ]
+}
