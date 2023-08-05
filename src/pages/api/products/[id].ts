@@ -23,9 +23,8 @@ export default function handler(
   let { id } = req.query;
   if (req.method == "GET") {
     let prod = data.products;
-    let product = prod.filter(
-      (item: ProductType) => item.id.toString() == `${id}`
-    );
+    let product = prod.filter((item: ProductType) => item.id.toString() == `${id}`);
+    console.log(product);
     res.status(200).json({ product: product[0] });
   } else if (req.method == "PATCH") {
     res.status(203).json({ method: "patch" });
